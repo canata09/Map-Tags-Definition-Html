@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
 </head>
+
 <body>
-    <img src="harita.png" usemap="#harita">
-    <map name="harita">
-      <area shape="rect" coords="0,0,50,50" href="sayfa1.html" alt="Alan 1">
-      <area shape="circle" coords="100,100,50" href="sayfa2.html" alt="Alan 2">
-      <area shape="poly" coords="150,0,200,50,100,100" href="sayfa3.html" alt="Alan 3">
-    </map>
-    
+
+  <img class="map" src="harita.png" usemap="#harita" data-maphilight='{"fillColor":"0000ff","fillOpacity":0.3}'>
+  <map name="harita">
+    <area shape="rect" coords="10,10,60,60" href="map1.html" alt="Area 1">
+    <area shape="circle" coords="120,120,70" href="map2.html" alt="Area 2">
+    <area shape="poly" coords="160,10,210,60,110,110" href="page3.html" alt="Area 3">
+  </map>
+
+  <script type="text/javascript">
+    $(function () {
+      $('.map').maphilight();
+    });
+  </script>
+
 </body>
+
 </html>
